@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Data</title>
+</head>
+<body>
+    <h1>Session Data</h1>
+    {% if user_data: %}
+        <ul>
+        {% for key, value in user_data.items() %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No data available.</p>
+    {% endif %}
+    <a href="/set_data">Set Data</a> | <a href="/clear_data">Clear Data</a>
+</body>
+</html>
