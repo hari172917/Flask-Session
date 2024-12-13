@@ -4,7 +4,7 @@ app.secret_key="harikrishnan"
 @app.route("/")
 def index():
     user_data=session.get('user_data',{})
-    return render_template('indexs.html',user_data=user_data)
+    return render_template('index.html',user_data=user_data)
 
 @app.route("/set_data",methods=["POST","GET"])
 def set():

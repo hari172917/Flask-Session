@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Session Basics
+        </title>
+    </head>
+    <body>
+        <h1>Hello Welcome to Sessions</h1>
+            {% if user_data %}
+                {% for key , value in user_data.items(): %}
+                <strong>{{key}}:</strong>{{ value}}
+                {% endfor %}
+            {% else %}
+            <p>No Data available Please Enter</p>
+            {% endif %}
+        
+            <nav>
+                <a href="/set_data" class="nav-link">Set Data</a> | 
+                <a href="/clear_data" class="nav-link">Clear Data</a>
+            </nav>
+            
+    </body>
+</html>
